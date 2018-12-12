@@ -4,11 +4,11 @@ num_of_tries = 0
 
 
 # grid init
-# puzzle_map = [[0 for i in range(column)] for j in range(row)]
+puzzle_map = [[0 for i in range(column)] for j in range(row)]
 
 
 # setting map
-puzzle_map = [[3, 7, 0, 0, 1, 0, 0, 5, 8],
+#puzzle_map = [[3, 7, 0, 0, 1, 0, 0, 5, 8],
               [6, 1, 0, 0, 0, 0, 0, 7, 2],
               [0, 0, 2, 0, 0, 0, 1, 0, 0],
               [0, 0, 0, 6, 0, 8, 0, 0, 0],
@@ -90,6 +90,7 @@ def solver(grid, i=0, j=0):
     return False
 
 
+creating_puzzle_map(puzzle_map, column, row)
 solver(puzzle_map)
 printing(puzzle_map, row)
 print(num_of_tries)
