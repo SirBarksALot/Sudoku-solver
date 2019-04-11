@@ -69,7 +69,7 @@ def validate_number(grid, i, j, num, x, y):
 # if all cells full then return True
 # trying numbers from 1,10 in found blank cell
 # and running it against validator
-def solver(grid, i=0, j=0):
+def solver(grid):
     global num_of_tries, column, row
 
     # search for the next blank cell
@@ -80,7 +80,7 @@ def solver(grid, i=0, j=0):
     for n in range(1, 10):
         if validate_number(grid, i, j, n, column, row) is True:
             grid[i][j] = n
-            if solver(grid, i, j) is True:
+            if solver(grid) is True:
                 return True
 
             # reset cell in case of fail
